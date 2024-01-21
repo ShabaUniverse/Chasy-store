@@ -1,12 +1,11 @@
 import "../src/App.scss";
+import Header from "./components/Header";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <div className="logo">
-        <h1 className="check">CHASY</h1>
-        <p>on your wrist</p>
-      </div>
+      <Header />
     </div>
   );
 }

@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: chartreuse;
+  .header-container {
+    width: 1200px;
+    .header-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .header-logo {
+        text-align: center;
+        h1 {
+          font-size: 30px;
+          font-weight: 400;
+          font-family: 'Bruno Ace SC', sans-serif;
+        }
+
+        span {
+          font-size: 16px;
+          font-weight: 300;
+          font-family: 'Bruno Ace SC', sans-serif;
+        }
+      }
+
+      .header-links{
+        a {
+            font-size: 13px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: black;
+            padding: 10px 2px;
+        }
+        a:hover{
+            background-color: #eae5e5;
+        }
+      }
+
+      .header-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            border: none;
+            outline: none;
+            padding: 5px 10px;
+            background-color: #eae5e5;
+        }
+
+        .header-bag {
+            margin-left: 5px;
+            width: 26px;
+        }
+      }
+
+      .header-auth {
+        button {
+            padding: 7px 5px;
+            border: none;
+        }
+        .header-signup{
+            background-color: black;
+            color: white;
+        }
+
+        .header-signin {
+            background-color: #eae5e5;
+            color: black;
+        }
+      }
+    }
+  }
+}
