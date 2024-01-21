@@ -1,0 +1,45 @@
+.home {
+    background-image: url("../../images/home-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+
+    .home-container {
+        width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+
+        .home-wrapper {
+            height: 100%;
+            position: relative;
+
+            .home-title{
+                width: 350px;
+                position: absolute;
+                top: 200px;
+                right: 100px;
+                
+                h2 {
+                    font-size: 35px;
+                    font-family: 'Bruno Ace SC', sans-serif;
+                }
+
+                button {
+                    border: none;
+                    outline: none;
+                    padding: 10px 15px;
+                    background-color: black;
+                    color: white;
+                    margin-top: 20px;
+                }
+
+                button:hover{
+                    background-color: white;
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
