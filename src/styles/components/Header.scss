@@ -73,6 +73,28 @@
             color: black;
         }
       }
+
+      .header-menu-mob {
+        // display: none;
+        .ham-menu-svg {
+          width: 30px;
+          fill: black;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 10px;
+    .header-links {
+      display: none;
+    }
+
+    .header-auth {
+      display: none;
     }
   }
 }
