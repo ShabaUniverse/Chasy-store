@@ -1,42 +1,75 @@
-.footer{
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .footer-container{
-        width: 1200px;
-        margin: 0 auto;
-        .footer-wrapper{
+.footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-container {
+    width: 1200px;
+    margin: 0 auto;
+    .footer-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-left {
+        p {
+          font-size: 12px;
+        }
+        a {
+          color: black;
+          text-decoration: underline;
+        }
+      }
+
+      .footer-center {
+        text-align: center;
+        transform: translateX(-10%);
+        h1,
+        span {
+          font-family: "Bruno Ace SC", sans-serif;
+        }
+      }
+
+      .footer-right {
+        a {
+          text-decoration: underline;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+// RESPONSIVE -------------------------------------
+
+// 800 --------------------------------------------
+
+@media only screen and (max-width: 800px){
+    .footer {
+        height: auto;
+        
+        .footer-container {
+          width: auto;
+          
+          .footer-wrapper {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
 
-            .footer-left{
-                p{
-                    font-size: 12px;
-                }
-                a{
-                    color: black;
-                    text-decoration: underline;
-                }
-            }
+            
 
-            .footer-center{
-                transform: translateX(-10%);
-                text-align: center;
-
-                h1,span{
-                    font-family: 'Bruno Ace SC', sans-serif;
-                }
+            .footer-center {
+                transform: translateX(0);
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
-
-            .footer-right {
-                a {
-                    text-decoration: underline;
-                    color: black;
-                }
-            }
+            
+          }
         }
-    }
+      }
 }
+
+

@@ -1,8 +1,8 @@
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
   .header-container {
     width: 1200px;
     .header-wrapper {
@@ -16,26 +16,26 @@
         h1 {
           font-size: 30px;
           font-weight: 400;
-          font-family: 'Bruno Ace SC', sans-serif;
+          font-family: "Bruno Ace SC", sans-serif;
         }
 
         span {
           font-size: 16px;
           font-weight: 300;
-          font-family: 'Bruno Ace SC', sans-serif;
+          font-family: "Bruno Ace SC", sans-serif;
         }
       }
 
-      .header-links{
+      .header-links {
         a {
-            font-size: 13px;
-            margin-right: 10px;
-            text-decoration: none;
-            color: black;
-            padding: 10px 2px;
+          font-size: 13px;
+          margin-right: 10px;
+          text-decoration: none;
+          color: black;
+          padding: 10px 2px;
         }
-        a:hover{
-            background-color: #eae5e5;
+        a:hover {
+          background-color: #eae5e5;
         }
       }
 
@@ -46,55 +46,129 @@
         align-items: center;
 
         input {
-            border: none;
-            outline: none;
-            padding: 5px 10px;
-            background-color: #eae5e5;
+          border: none;
+          outline: none;
+          padding: 5px 10px;
+          background-color: #eae5e5;
         }
 
         .header-bag {
-            margin-left: 5px;
-            width: 26px;
+          margin-left: 5px;
+          width: 26px;
         }
       }
 
       .header-auth {
         button {
-            padding: 7px 5px;
-            border: none;
+          padding: 7px 5px;
+          border: none;
         }
-        .header-signup{
-            background-color: black;
-            color: white;
+        .header-signup {
+          background-color: black;
+          color: white;
         }
 
         .header-signin {
-            background-color: #eae5e5;
-            color: black;
+          background-color: #eae5e5;
+          color: black;
         }
       }
 
       .header-menu-mob {
-        // display: none;
+        display: none;
         .ham-menu-svg {
           width: 30px;
           fill: black;
         }
       }
+
+      .pop-nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background-color: white;
+        display: none;
+        transition: 0.5s;
+        
+        svg {
+          height: 40px;
+          margin: 10px;
+          align-self: flex-end;
+        }
+
+        .pop-nav-auth {
+          button {
+            padding: 7px 5px;
+            border: none;
+          }
+          .header-signup {
+            background-color: black;
+            color: white;
+          }
+  
+          .header-signin {
+            background-color: #eae5e5;
+            color: black;
+          }
+        }
+
+        .pop-nav-links {
+          display: flex;
+          flex-direction: column;
+
+          
+
+          a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 0;
+          }
+
+          a:hover {
+            background-color: #eae5e5;
+          }
+        }
+
+        
+      }
     }
   }
 }
 
+// RESPONSIVE ---------------------------------
 
-@media only screen and (max-width: 700px) {
+// 700 ----------------------------------------
+
+@media only screen and (max-width: 800px) {
   .header {
-    padding: 0 10px;
-    .header-links {
-      display: none;
-    }
+    .header-container {
+      width: 1200px;
+      .header-wrapper {
+        .header-links {
+          display: none;
+        }
 
-    .header-auth {
-      display: none;
+        .header-auth {
+          display: none;
+        }
+
+        .header-menu-mob {
+          display: flex;
+          .ham-menu-svg {
+            width: 30px;
+            fill: black;
+          }
+        }
+
+        .pop-nav {
+          display: none;
+        }
+      }
     }
   }
 }

@@ -82,17 +82,19 @@
 
 // RESPONSIVE ----------------------------------------
 
-// 700 -----------------------------------------------
+// 750 -----------------------------------------------
 
 @media only screen and (max-width: 750px) {
   .home {
     .home-top {
-      background-position: right;
-
+      background-position: center;
+      background-size: cover;
       .home-title {
         .home-title-description {
           top: 200px;
           right: 20px;
+          background-color: #f0e7d8;
+          padding: 2px;
         }
       }
     }
