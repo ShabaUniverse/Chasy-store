@@ -80,16 +80,44 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+// RESPONSIVE ----------------------------------------
+
+// 700 -----------------------------------------------
+
+@media only screen and (max-width: 750px) {
   .home {
-    
-    .home-recommended .recommended-blocks {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      .block {
-        background-color: aqua;
+    .home-top {
+      background-position: right;
+
+      .home-title {
+        .home-title-description {
+          top: 200px;
+          right: 20px;
+        }
+      }
+    }
+
+    .home-recommended {
+      .recommended-blocks {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+// 750 - 900 -------------------------------------------
+
+@media only screen and (min-width: 751px) and (max-width: 900px) {
+  .home {
+    .home-recommended {
+      .recommended-blocks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        
       }
     }
   }
