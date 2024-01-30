@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [showNav, setShowNav] = useState(false);
+  
   const popNavStyle = {
     display: showNav ? "flex" : "none",
   };
@@ -56,6 +57,8 @@ const Header = () => {
               </g>
             </svg>
           </div>
+
+          {/*  --------- POP NAV -------------- */}
 
           <div className="pop-nav" style={popNavStyle}>
             <svg

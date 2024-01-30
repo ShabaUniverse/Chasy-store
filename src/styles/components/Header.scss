@@ -102,6 +102,7 @@
         }
 
         .pop-nav-auth {
+          padding-left: 10px;
           button {
             padding: 7px 5px;
             border: none;
@@ -120,7 +121,8 @@
         .pop-nav-links {
           display: flex;
           flex-direction: column;
-
+          padding-left: 10px;
+          margin-top: 10px;
           
 
           a {
