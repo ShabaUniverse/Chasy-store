@@ -19,10 +19,10 @@ const Header = () => {
           </div>
 
           <div className="header-links">
-            <Link>Home</Link>
-            <Link>Shop</Link>
-            <Link>Featured</Link>
-            <Link>Recommended</Link>
+            <Link to="/">Home</Link>
+            <Link to="/shop">Shop</Link>
+            <Link to="/featured">Featured</Link>
+            <Link to="/recommended">Recommended</Link>
           </div>
 
           <div className="header-options">
