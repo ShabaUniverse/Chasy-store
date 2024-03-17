@@ -1,0 +1,42 @@
+.featured {
+    min-height: 60vh;
+    .featured-container{
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .featured-head {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .featured-products {
+            
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+
+
+            .product {
+                width: 240px;
+                height: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 2px solid white;
+
+                &:hover {
+                    border: 2px solid #f0e7d8;
+                }
+
+                img {
+                    width: 150px;
+                }
+
+                p {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
