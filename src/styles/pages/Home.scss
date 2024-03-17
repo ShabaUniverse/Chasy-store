@@ -67,14 +67,31 @@
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-column-gap: 5px;
-      grid-row-gap: 5px;
+      grid-row-gap: 35px;
+      justify-items: center;
+      align-items: center;
+      
 
       .block {
-        background-color: black;
-        width: 200px;
-        height: 200px;
-        color: white;
-        margin: 0 auto;
+        width: 240px;
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+
+        &:hover {
+          border: 2px solid #f0e7d8;
+        }
+
+        img {
+          width: 150px;
+        }
+
+        p {
+          margin-top: 15px;
+        }
       }
     }
   }
@@ -104,7 +121,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
       }
     }
   }
@@ -114,12 +131,25 @@
 
 @media only screen and (min-width: 751px) and (max-width: 900px) {
   .home {
+
+    .home-top {
+      background-position: center;
+      background-size: cover;
+      .home-title {
+        .home-title-description {
+          top: 200px;
+          right: 20px;
+          background-color: #f0e7d8;
+          padding: 2px;
+        }
+      }
+    }
+
     .home-recommended {
       .recommended-blocks {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
-        
       }
     }
   }

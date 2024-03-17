@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/pages/Home.scss";
 import { Link } from "react-router-dom";
 
+import { db } from "../firebase/firebase-config";
+import {doc, setDoc, getDoc} from 'firebase/firestore';
+
 const Home = () => {
+
+  let [receivedProducts, setReceivedProducts] = useState([]);
+
+  useEffect(() => {
+    const getDataFromFirestore = async () => {
+      const docRef = doc(db, 'products', "allPRoDucTsqxshdNshrZ");
+      const docSnap = await getDoc(docRef);
+      const snapshot = docSnap.data();
+      console.log(snapshot)
+      const firstEightProducts = snapshot.products.slice(0, 8);
+      setReceivedProducts(firstEightProducts);
+    } 
+
+    getDataFromFirestore();
+  }, [])
+
+
+
   return (
     <div className="home">
       <div className="home-top">
@@ -26,15 +47,16 @@ const Home = () => {
             <h4>Recommended Products</h4>
             <Link href="">See All</Link>
           </div>
+
           <div className="recommended-blocks">
-            <div className="block">Azaza</div>
-            <div className="block">Azaza</div>
-            <div className="block">Azaza</div>
-            <div className="block">Azaza</div>
-            <div className="block">Azaza</div>
-            <div className="block">Azaza</div>
-            <div className="block">Azaza</div>
-            <div className="block">Azaza</div>
+            {
+              receivedProducts.map((item) => (
+                <div className="block">
+                  <img src={item.image} alt="" />
+                  <p>{item.title}</p>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
