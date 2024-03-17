@@ -44,7 +44,7 @@ const Home = () => {
         <div className="home-container">
           <div className="home-recommended-desc">
             <h4>Recommended Products</h4>
-            <Link href="">See All</Link>
+            <Link to="/recommended">See All</Link>
           </div>
 
           <div className="recommended-blocks">
