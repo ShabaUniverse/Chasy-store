@@ -6,14 +6,18 @@ import { doc, getDoc } from "firebase/firestore";
 const Shop = () => {
 
   const [shopProducts, setShopProducts] = useState([]);
+  const [pending, setPending] = useState(false);
+
 
   useEffect(() => {
     const getDataFromFirestore = async () => {
+      setPending(true);
       const docRef = doc(db, "products", "allPRoDucTsqxshdNshrZ");
       const docSnap = await getDoc(docRef);
       const snapshot = docSnap.data();
       console.log(snapshot.products);
       setShopProducts(snapshot.products);
+      setPending(false);
     };
     getDataFromFirestore();
   }, []);
@@ -22,11 +26,12 @@ const Shop = () => {
       <div className="shop">
         <div className="shop-container">
             <div className="shop-head">
-                <h3> Chasy Shop </h3>
+                {!pending && <p>Chasy Shop</p>} 
             </div>
+
             <div className="shop-products">
                 {
-                    shopProducts.map((item, index) => (
+                    pending === true ? <span>Loading Data</span> : shopProducts.map((item, index) => (
                         <div className="product" key={index}>
                             <img src={item.image} alt="" />
                             <p>{item.title}</p>

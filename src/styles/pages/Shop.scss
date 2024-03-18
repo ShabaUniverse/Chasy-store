@@ -19,6 +19,14 @@
       justify-items: center;
       align-items: center;
 
+      span {
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+      }
+
       .product {
         width: 240px;
         height: 350px;
