@@ -18,6 +18,11 @@
       grid-row-gap: 15px;
       justify-items: center;
       align-items: center;
+      
+      a {
+        text-decoration: none;
+        color: black;
+      }
 
       span {
         font-size: 20px;
@@ -29,7 +34,7 @@
 
       .product {
         width: 240px;
-        height: 350px;
+        height: 320px;
         display: flex;
         flex-direction: column;
         justify-content: center;

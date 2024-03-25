@@ -3,25 +3,21 @@ import "../styles/pages/Home.scss";
 import { Link } from "react-router-dom";
 
 import { db } from "../firebase/firebase-config";
-import {doc, getDoc} from 'firebase/firestore';
+import { doc, getDoc } from "firebase/firestore";
 
 const Home = () => {
-
   const [receivedProducts, setReceivedProducts] = useState([]);
 
   useEffect(() => {
     const getDataFromFirestore = async () => {
-      const docRef = doc(db, 'products', "allPRoDucTsqxshdNshrZ");
+      const docRef = doc(db, "products", "allPRoDucTsqxshdNshrZ");
       const docSnap = await getDoc(docRef);
       const snapshot = docSnap.data();
-      console.log(snapshot)
       const firstEightProducts = snapshot.products.slice(0, 8);
       setReceivedProducts(firstEightProducts);
-    }
+    };
     getDataFromFirestore();
-  }, [])
-
-
+  }, []);
 
   return (
     <div className="home">
@@ -48,14 +44,12 @@ const Home = () => {
           </div>
 
           <div className="recommended-blocks">
-            {
-              receivedProducts.map((item, index) => (
-                <div className="block" key={index}>
-                  <img src={item.image} alt="" />
-                  <p>{item.title}</p>
-                </div>
-              ))
-            }
+            {receivedProducts.map((item, index) => (
+              <div className="block" key={index}>
+                <img src={item.image} alt="" />
+                <p>{item.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
