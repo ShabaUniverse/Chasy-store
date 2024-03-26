@@ -31,7 +31,7 @@ const Shop = () => {
           ) : (
             shopProducts.map((item) => (
               <Link to={`/product/${item.id}`} key={item.id}>
-                <div className="product" key={item.id}>
+                <div className="shop-product" key={item.id}>
                   <img src={item.image} alt="" />
                   <p>{item.title}</p>
                 </div>

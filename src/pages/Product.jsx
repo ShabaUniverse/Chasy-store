@@ -28,9 +28,9 @@ const Product = () => {
       <div className="product-container">
         <div className="product-wrapper">
           {uniqueItem && (
-            <div className="item">
+            <div className="product-item">
               <img src={uniqueItem.image} alt="" />
-              <div className="item-description">
+              <div className="product-item-description">
                 <p className="unique-item-title">{uniqueItem.title}</p>
                 <p className="unique-item-size">{uniqueItem.size}</p>
                 <p className="unique-item-madein">Made in: {uniqueItem.country}</p>

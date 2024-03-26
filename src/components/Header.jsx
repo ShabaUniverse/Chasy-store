@@ -21,8 +21,6 @@ const Header = () => {
           <div className="header-links">
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
-            <Link to="/featured">Featured</Link>
-            <Link to="/recommended">Recommended</Link>
           </div>
 
           <div className="header-options">
@@ -79,8 +77,6 @@ const Header = () => {
             <div className="pop-nav-links">
               <Link>Home</Link>
               <Link>Shop</Link>
-              <Link>Featured</Link>
-              <Link>Recommended</Link>
             </div>
           </div>
         </div>

@@ -40,7 +40,7 @@ const Home = () => {
         <div className="home-container">
           <div className="home-recommended-desc">
             <h4>Recommended Products</h4>
-            <Link to="/recommended">See All</Link>
+            <Link to="/shop">See All</Link>
           </div>
 
           <div className="recommended-blocks">
