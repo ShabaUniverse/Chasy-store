@@ -69,6 +69,8 @@ const Header = () => {
               />
             </svg>
 
+
+
             <div className="pop-nav-auth">
               <button className="header-signup">Sign Up</button>
               <button className="header-signin">Sign In</button>
